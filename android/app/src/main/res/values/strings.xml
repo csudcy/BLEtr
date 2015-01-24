@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">BLEtr</string>
+
+    <string name="main__menu_settings">Settings</string>
+    <string name="main__monitor_switch">Monitoring enabled</string>
+    <string name="main__monitoring_error">Monitoring error: %1$s</string>
+    <string name="main__beaconstatus_initial">Initialising…</string>
+    <string name="main__eventstatus_initial">Initialising…</string>
+
+    <string name="settings__title">Settings</string>
+
+    <string name="settings__report_server">Server</string>
+    <string name="settings__report_username">Username</string>
+    <string name="settings__report_password">Password</string>
+    <string name="settings__report_interval">Interval (events)</string>
+
+    <string name="beacontracker__no_beacons">No beacons found!</string>
+    <string name="beacontracker__beacon_result">%1$s. %2$fm (%3$s)</string>
+
+    <string name="eventtracker__no_events">No events tracked!</string>
+    <string name="eventtracker__result">%1$s events (%2$s/%3$s to report)</string>
+</resources>

@@ -1,0 +1,31 @@
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
+    <EditTextPreference
+        android:key="report_server"
+        android:title="@string/settings__report_server"
+        android:defaultValue="192.168.1.72:5000"
+        android:selectAllOnFocus="true"
+        android:inputType="text"
+        android:capitalize="none"
+        android:singleLine="true"
+        android:maxLines="1" />
+
+    <EditTextPreference
+        android:key="report_username"
+        android:title="@string/settings__report_username"
+        android:defaultValue="csudcy"
+        android:selectAllOnFocus="true" />
+
+    <EditTextPreference
+        android:key="report_password"
+        android:title="@string/settings__report_password"
+        android:defaultValue="password"
+        android:selectAllOnFocus="true"
+        android:inputType="textPassword" />
+
+    <uk.me.csudcy.bletr.EditIntegerPreference
+        android:key="report_interval"
+        android:title="@string/settings__report_interval"
+        android:defaultValue="10"
+        android:selectAllOnFocus="true"
+        android:inputType="number" />
+</PreferenceScreen>
