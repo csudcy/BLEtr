@@ -1,0 +1,52 @@
+<!doctype html>
+<html>
+    <head>
+        {% block head %}
+            <title>BLEtr</title>
+            <link rel="stylesheet" href="{{url_for('static', filename='css/main.css')}}" type="text/css" />
+            <link rel="shortcut icon" href="{{url_for('static', filename='img/favicon.png')}}"/>
+        {% endblock %}
+    </head>
+    <body>
+        <header class="frame">
+            <span class="title">
+                <a href="{{url_for('splash')}}">BLEtr</a>
+            </span>
+            <span class="user_links">
+                {% if request.user %}
+                    <span>
+                        Welcome {{ request.user.username }}!
+                    </span>
+
+                    <span class="sync_status sync_status_{{ request.user.sync_status_summary }}" title="{{ request.user.sync_status_text }}">
+                        &nbsp;
+                    </span>
+
+                    {% if request.user.is_admin %}
+                        <span>
+                            <a target="_blank" href="{{ url_for('clear_events') }}">Clear Events</a>
+                        </span>
+                        <span>
+                            <a target="_blank" href="{{ url_for('admin.index') }}">Admin</a>
+                        </span>
+                    {% endif %}
+
+                    <span>
+                        <a href="{{url_for('logout')}}">Logout</a>
+                    </span>
+                {% else %}
+                    Welcome!
+                {% endif %}
+            </span>
+        </header>
+        <article class="frame">
+            {% block body %}
+                You probably want to put something here...
+            {% endblock %}
+        </article>
+        <footer class="frame">
+            {% block footer %}
+            {% endblock %}
+        </footer>
+    </body>
+</html>

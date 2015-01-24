@@ -1,0 +1,23 @@
+<html>
+    <head>
+        <title>
+            BLEtr Server - Clear Events
+        </title>
+    </head>
+    <body>
+        {% if request.user.is_admin %}
+            <h1>
+                Really clear all events?
+            </h1>
+            <form method="POST" action=".">
+                <button type="submit">Yes!</button>
+            </form>
+        {% else %}
+            <h1>
+                Only admins can clear events!<br/>
+                <br/>
+                <a href="{{ url_for('bletr') }}">Alrighty then</a>
+            </h1>
+        {% endif %}
+    </body>
+</html>
